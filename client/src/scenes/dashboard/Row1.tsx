@@ -2,8 +2,8 @@
 import { useMemo } from 'react';
 import DashboardBox from '../../components/DashboardBox'
 import { useGetKpisQuery } from '../../state/api'
-import { ResponsiveContainer, AreaChart, CartesianGrid, XAxis, YAxis, Tooltip, Area, Line, BarChart, Legend, LineChart, Bar, Rectangle } from "recharts";
-import { useTheme } from '@emotion/react';
+import { ResponsiveContainer, AreaChart, CartesianGrid, XAxis, YAxis, Tooltip, Area, Line, BarChart, Legend, LineChart, Bar } from "recharts";
+import { useTheme } from '@mui/material';
 import BoxHeader from '../../components/BoxHeader';
 
 

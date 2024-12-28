@@ -1,13 +1,12 @@
-import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, Cell, Pie, PieChart, Scatter, ScatterChart, ZAxis } from 'recharts';
+import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Line, Cell, Pie, PieChart, Scatter, ScatterChart, ZAxis } from 'recharts';
 import BoxHeader from '../../components/BoxHeader';
 import DashboardBox from '../../components/DashboardBox'
 import { useGetKpisQuery, useGetProductsQuery } from '../../state/api'
-import { useTheme } from '@emotion/react';
+import { useTheme } from '@mui/material';
 import { useMemo } from 'react';
-import { data } from 'react-router-dom';
 import FlexBetween from '../../components/FlexBetween';
 import { Box, Typography } from '@mui/material';
-import { Props } from 'recharts/types/container/Surface';
+
 
 
 const pieData = [
@@ -15,7 +14,7 @@ const pieData = [
     { name: "Group B", value: 400 }
 ]
 
-const Row2 = (props: Props) => {
+const Row2 = () => {
 
     const { palette } = useTheme();
     const pieColors = [palette.primary[800], palette.primary[300]];
@@ -124,7 +123,7 @@ const Row2 = (props: Props) => {
                             paddingAngle={5}
                             dataKey="value"
                         >
-                            {pieData.map((entry, index) => (
+                            {pieData.map((_entry, index) => (
                                 <Cell
                                     key={`cell-${index}`}
                                     fill={pieColors[index]}

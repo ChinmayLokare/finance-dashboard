@@ -2,7 +2,6 @@ import { Box } from '@mui/material';
 import { styled } from '@mui/system';
 
 
-type Props = {}
 
 const DashboardBox = styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.background.light,
